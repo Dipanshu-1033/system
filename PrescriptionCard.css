@@ -1,0 +1,96 @@
+
+.prescription-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.prescription-card:hover {
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+  transform: translateY(-2px);
+}
+
+.prescription-card.active {
+  border-left: 4px solid #10b981;
+}
+
+.prescription-card.expired {
+  border-left: 4px solid #ef4444;
+  opacity: 0.8;
+}
+
+.prescription-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.prescription-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.25rem;
+}
+
+.prescription-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.active-badge {
+  background: #10b981;
+}
+
+.expired-badge {
+  background: #ef4444;
+}
+
+.prescription-details {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.prescription-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prescription-row .label {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.prescription-row .value {
+  color: #1f2937;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .prescription-card {
+    padding: 1rem;
+  }
+  
+  .prescription-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .prescription-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .prescription-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
